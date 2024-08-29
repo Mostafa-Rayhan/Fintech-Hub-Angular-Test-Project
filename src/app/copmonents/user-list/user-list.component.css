@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* user-list.component.css */
+.mat-column-actions {
+    width: 100px; /* Adjust the width as necessary */
+    text-align: center;
+  }
+  
+  .mat-table {
+    table-layout: fixed;
+    width: 100%; /* Ensure the table takes up the full width */
+  }
+  
+  .mat-header-cell, .mat-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* .sec {
+    margin: 100px;
+  } */

@@ -1,0 +1,48 @@
+<div mat-dialog-title>
+    <h1>{{ isEditMode ? 'Edit User' : 'Add User' }}</h1>
+</div>
+<form class="example-form" [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>User Id</mat-label>
+                <input matInput type="text" placeholder="Ex. 001" formControlName="userId">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput type="text" placeholder="Ex. John Due" formControlName="fullName" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="email" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile No</mat-label>
+                <input matInput type="text" placeholder="Ex. 01*********" formControlName="mobileNo" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Present Address</mat-label>
+                <input matInput type="text" placeholder="Ex. Your Present Address" formControlName="presentAddress" required>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Permanent Address</mat-label>
+                <input matInput type="text" placeholder="Ex. Your Permanent Address" formControlName="permanentAddress" required>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">{{ isEditMode ? 'Update' : 'Add' }}</button>
+    </div>
+</form>
